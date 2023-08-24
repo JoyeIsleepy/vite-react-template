@@ -3,8 +3,7 @@ import { Routes, Route, Link, useRoutes } from "react-router-dom";
 import routes from "@/router";
 
 function App() {
-  const element = useRoutes(routes);
-  console.log(element, "element");
+  const element = useRoutes(routes); 
   return <> {element}</>;
 }
 
