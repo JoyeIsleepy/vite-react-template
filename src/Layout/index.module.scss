@@ -1,0 +1,27 @@
+.layoutBox {
+  width: 100vw;
+  height: 100vh;
+  .LayoutLeft {
+    height: 100%;
+    .layoutSider {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .outlineBtn {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer; 
+      @include borderRadios(4px);
+      background-color: rgba(170, 174, 178, 0.4);
+      &:hover {
+        background-color: rgba(170, 174, 178, 0.6);
+      }
+    }
+  }
+  .layoutConter {
+    height: 100%;
+    overflow-y: auto;
+  }
+}

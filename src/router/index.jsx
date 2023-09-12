@@ -1,4 +1,4 @@
-import Home from "@/pages/Home";
+import Layout from "@/Layout";
 import List from "@/pages/List";
 import GoodsList from "@/pages/GoodsList";
 import Index1 from "@/pages/index1";
@@ -8,7 +8,7 @@ import Index3 from "@/pages/index3";
 const routes = [
   {
     path: "/",
-    element: <Home />,
+    element: <Layout />,
     children: [
       {
         path: "goodsList",

@@ -9,6 +9,17 @@ export default defineConfig({
       "@": "/src",
     },
   },
+   // 主要是这一段
+   css: {
+    preprocessorOptions: {
+      // 全局样式引入
+      scss: {
+        // 文件路径，注意最后需要添加 ';'
+        additionalData: '@import "@/styles/mixin.scss";',
+        javascriptEnabled: true
+      }
+    }
+  },
   plugins: [
     react(),
     /* legacy 为传统浏览器提供支持(如何不需要支持低版本浏览器可以删除该插件)
