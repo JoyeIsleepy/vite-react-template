@@ -1,14 +1,6 @@
 import React, { useState } from 'react'
-import {
-  Routes,
-  Route,
-  Link,
-  useRoutes,
-  Outlet,
-  useNavigate
-} from 'react-router-dom'
-import routes from '@/router'
-import { Breadcrumb, Layout, Menu, theme, Button } from 'antd'
+import { Outlet } from 'react-router-dom'   
+import { Layout, Menu, theme, Button } from 'antd'
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
@@ -16,13 +8,12 @@ import {
   UserOutlined,
   VideoCameraOutlined
 } from '@ant-design/icons'
+import MenuCom from './Sider'
 import styles from './index.module.scss'
 
 const { Header, Sider, Content } = Layout
 
 export default function home() {
-  /*   const element = useRoutes(routes)
-  let navigate = useNavigate() */
   const {
     token: { colorBgContainer }
   } = theme.useToken()
@@ -55,29 +46,22 @@ export default function home() {
           collapsible
           collapsed={collapsed}
         >
+          <MenuCom />
           <div
             className={styles.outlineBtn}
             onClick={() => setCollapsed(!collapsed)}
           >
             {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
           </div>
-          {/* <Menu
-              mode='inline'
-              defaultSelectedKeys={['1']}
-              defaultOpenKeys={['sub1']}
-              style={{
-                height: '100%',
-                borderRight: 0
-              }}
-              items={items2}
-            /> */}
         </Sider>
         <Layout
           style={{
             padding: '0 24px 24px'
           }}
         >
-          <div className={styles.layoutConter}>zkzk</div>
+          <div className={styles.layoutConter}>
+            <Outlet />
+          </div>
         </Layout>
       </Layout>
     </Layout>

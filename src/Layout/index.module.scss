@@ -7,17 +7,27 @@
       height: 100%;
       overflow-y: auto;
     }
+    :global {
+      .ant-layout-sider-children {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
     .outlineBtn {
       height: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer; 
+      cursor: pointer;
       @include borderRadios(4px);
       background-color: rgba(170, 174, 178, 0.4);
       &:hover {
         background-color: rgba(170, 174, 178, 0.6);
       }
+    }
+    .siderBox {
+      flex: 1;
     }
   }
   .layoutConter {
