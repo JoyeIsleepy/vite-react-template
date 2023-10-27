@@ -1,0 +1,16 @@
+.dndBox {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 70px;
+  ul {
+    border: 1px dashed #ccc;
+    padding: 30 20px;
+    background-color: #ffebe6;
+    li {
+      padding: 30px 40px;
+      cursor: pointer;
+      border-bottom: 1px dashed #ccc;
+    }
+  }
+}
+
